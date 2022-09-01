@@ -13,7 +13,7 @@ app.get("", (req, res) =>{
 
 app.get("/about", (req, res)=>{
     res.render("about");
-    console.log(req);  
+    console.log("weq");  
 })
 
 app.get("/products", (req, res)=>{
