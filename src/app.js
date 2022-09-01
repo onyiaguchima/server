@@ -8,7 +8,7 @@ app.use(express.static(route));
 app.set("view engine", "hbs");
 // app.set('views', __dirname + '/views');
 app.get("", (req, res) =>{
-    res.render("index", {name: "chima"});
+    res.render("index", {name: "chimbonda"});
 });
 
 app.get("/about", (req, res)=>{
