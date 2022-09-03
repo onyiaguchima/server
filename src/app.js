@@ -3,6 +3,7 @@ const path = require("path")
 const express = require("express");
 const app = express();
 const route = path.join(__dirname, "../public");
+const port = process.env.PORT || 3000
 
 app.use(express.static(route));
 app.set("view engine", "hbs");
@@ -14,7 +15,7 @@ app.get("", (req, res) =>{
 app.get("/about", (req, res)=>{
     res.render("about");
     console.log("weq");  
-})
+});
 
 app.get("/products", (req, res)=>{
     res.send({
@@ -29,6 +30,6 @@ app.get("*", (req, res)=>{
 
 
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log("server is running on port 3000");
 });
